@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทความออนไลน์และคอนเทนต์ | กชามาส โยธารักษ์</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&family=Prompt:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Prompt', 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', 'Prompt', sans-serif;
+        }
+        
+        .header-bg {
+            background: linear-gradient(180deg, rgba(181, 53, 246, 0.1) 0%, var(--bg-base) 100%);
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="blob shape-1"></div>
+    <div class="blob shape-2"></div>
+    <div class="grid-bg"></div>
+
+    <!-- Header Section -->
+    <header class="header-bg position-relative z-1 text-center">
+        <div class="container">
+            <div class="d-flex justify-content-start mb-4">
+                <a href="index.html" class="btn btn-outline-light rounded-pill px-4" style="border-color: rgba(255,255,255,0.2); backdrop-filter: blur(5px);">
+                    <i class="bi bi-arrow-left me-2"></i>กลับสู่หน้าหลัก
+                </a>
+            </div>
+            <span class="badge rounded-pill mb-3 px-3 py-2" style="background: rgba(255, 42, 133, 0.1); border: 1px solid var(--neon-pink); color: var(--neon-pink); font-size: 0.9rem;">Digital Content @ The KPI Plus</span>
+            <h1 class="display-5 fw-bold mb-3 text-white">บทความออนไลน์และคอนเทนต์</h1>
+            <p class="text-light mx-auto" style="max-width: 600px; line-height: 1.6;">รวบรวมบทความออนไลน์ที่ได้รับการเผยแพร่จริง โดยรับผิดชอบตั้งแต่การค้นคว้าประเด็น ค้นหา Keyword (SEO) เขียนเรียบเรียงเนื้อหา และจัดภาพประกอบหน้าเว็บ</p>
+        </div>
+    </header>
+
+    <!-- Articles Grid Section -->
+    <section class="py-4 position-relative z-1">
+        <div class="container pb-5">
+            <!-- 4 columns on Desktop (lg), 2 on Tablet (md), 1 on Mobile -->
+            <div id="articles-container" class="row g-4 d-flex align-items-stretch">
+                <!-- Javascript will render cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 position-relative z-1 border-top border-secondary border-opacity-25" style="background-color: var(--bg-base);">
+        <div class="container text-center">
+            <p class="mb-0 text-light small">&copy; 2026 กชามาส โยธารักษ์. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Mockup Data Array & Render Logic -->
+    <script>
+        // Array จัดเก็บข้อมูลบทความทั้ง 8 ชิ้น
+        // สามารถเปลี่ยน image url, tag, title, description, และ link url ได้ง่ายๆ
+        const articlesData = [
+            {
+                id: 1,
+                tag: "SEO Content",
+                title: "สร้างแบรนด์ให้โดดเด่นในยุคที่ทุกคนขายของออนไลน์",
+                description: " สร้างแบรนด์ให้โดดเด่นในยุคที่ทุกคนขายของออนไลน์ กลายเป็นเรื่องจำเป็น ไม่ใช่แค่ทางเลือกโลกออนไลน์",
+                image: "article_seo_tips.jpg",
+                url: "https://smedplus.com/%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87%e0%b9%81%e0%b8%9a%e0%b8%a3%e0%b8%99%e0%b8%94%e0%b9%8c%e0%b9%83%e0%b8%ab%e0%b9%89%e0%b9%82%e0%b8%94%e0%b8%94%e0%b9%80%e0%b8%94%e0%b9%88%e0%b8%99%e0%b9%83/"
+            },
+            {
+                id: 2,
+                tag: "Business & HR",
+                title: "PublishCopyกลยุทธ์ Upselling & Cross-selling สำหรับโรงแรม",
+                description: "ทำความเข้าใจความแตกต่างระหว่าง Upselling และ Cross-selling",
+                image: "article_digital_skills.jpg",
+                url: "https://thekpiplus.com/publishcopy%e0%b8%81%e0%b8%a5%e0%b8%a2%e0%b8%b8%e0%b8%97%e0%b8%98%e0%b9%8c-upselling-cross-selling-%e0%b8%aa%e0%b8%b3%e0%b8%ab%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b9%82%e0%b8%a3%e0%b8%87%e0%b9%81%e0%b8%a3/"
+            },
+            {
+                id: 3,
+                tag: "treeoclockpoolvilla",
+                title: "Cozy Villa Living for Couples at Tree O’Clock Phuket",
+                description: "In a world filled with constant hustle, spending quiet moments with your loved one in a beautiful setting is a precious gift.",
+                image: "article_ai_tools.jpg",
+                url: "https://treeoclockpoolvillaphuket.com/cozy-villa-living-for-couples-at-tree-oclock-phuket/"
+            },
+            {
+                id: 4,
+                tag: "treeoclockphuket",
+                title: "5 Dining Experiences at Tree O’Clock",
+                description: "Phuket is not only famous for its crystal-clear waters, stunning beaches, and cultural diversity",
+                image: "article_copywriting.jpg",
+                url: "https://treeoclockphuket.com/dining-experience-beyond-taste-and-atmosphere-at-tree-oclock-gallery-restaurant/"
+            },
+            {
+                id: 5,
+                tag: "SEO Content",
+                title: "การสร้าง Customer Journey บนแพลตฟอร์มดิจิทัล",
+                description: "การเข้าใจลูกค้าให้ลึก เพื่อสร้างยอดขายที่เกิดขึ้นจริงในโลกดิจิทัล",
+                image: "article_social_trends.jpg",
+                url: "https://smedplus.com/%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-customer-journey-%e0%b8%9a%e0%b8%99%e0%b9%81%e0%b8%9e%e0%b8%a5%e0%b8%95%e0%b8%9f%e0%b8%ad%e0%b8%a3%e0%b9%8c%e0%b8%a1%e0%b8%94/"
+            },
+            {
+                id: 6,
+                tag: "BYD Lofts",
+                title: "BYD Lofts Stay & Sunset at Promthep Cape",
+                description: "When it comes to traveling in Phuket, Patong is often the first choice for many visitors.",
+                image: "article_rebranding.jpg",
+                url: "https://bydlofts.com/byd-lofts-stay-sunset-at-promthep-cape/"
+            },
+            {
+                id: 7,
+                tag: "Productivity",
+                title: "รวมแอปพลิเคชันบริหารจัดการเวลาสำหรับคนทำงานหลายโปรเจกต์",
+                description: "แนะนำเครื่องมือจัดระเบียบตารางงานและติดตามความคืบหน้าของงานที่ต้องทำ",
+                image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                url: "#"
+            },
+            {
+                id: 8,
+                tag: "SEO Content",
+                title: "ความสำคัญของ On-Page SEO ที่หลายคนมองข้าม",
+                description: "เจาะลึกโครงสร้างเว็บไซต์และการวาง Tag ต่างๆ ให้ถูกต้องตามหลักของ Google",
+                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                url: "#"
+            }
+        ];
+
+        // ฟังก์ชันสำหรับเรนเดอร์การ์ดลงใน HTML
+        function renderArticles() {
+            const container = document.getElementById('articles-container');
+            let htmlContent = '';
+
+            articlesData.forEach(article => {
+                htmlContent += `
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="article-card position-relative">
+                            <!-- Image Thumbnail 16:9 -->
+                            <div class="article-img-wrapper">
+                                <img src="${article.image}" class="article-img" alt="${article.title}">
+                                <div class="article-overlay">
+                                    <i class="bi bi-link-45deg text-white" style="font-size: 2.5rem; filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Card Content -->
+                            <div class="p-3 d-flex flex-column flex-grow-1">
+                                <span class="badge rounded-pill mb-2 align-self-start" style="background: rgba(255,255,255,0.1); color: #ccc; font-weight: normal;">${article.tag}</span>
+                                <h5 class="text-white fs-6 mb-2 text-truncate-2-lines" style="line-height: 1.4;">${article.title}</h5>
+                                <p class="text-light small mb-4" style="font-size: 0.8rem; line-height: 1.5; color: #aaa !important;">${article.description}</p>
+                                
+                                <!-- External Link Button -->
+                                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25">
+                                    <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-gradient fw-bold d-inline-flex align-items-center" style="font-size: 0.85rem;">
+                                        อ่านบทความจริง <i class="bi bi-box-arrow-up-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        // เรียกใช้งานฟังก์ชันเมื่อโหลดหน้าเว็บเสร็จ
+        document.addEventListener('DOMContentLoaded', renderArticles);
+    </script>
+</body>
+
+</html>
